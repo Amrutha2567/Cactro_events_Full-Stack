@@ -1,34 +1,34 @@
-# Cactro_events_Full-Stack
-Question
-Start: 17/08/2025, 11:00:00
+# YouTube Companion Dashboard
 
-End: 17/08/2025, 14:00:00
+## Features
+- View video details
+- Edit title & description
+- Manage comments (add, reply, delete)
+- Add notes with tagging + search
+- Event logs stored in DB
 
-YouTube Companion Dashboard
-Task
-Build a mini-dashboard that connects to the YouTube API and helps users manage one of their uploaded videos in detail:
+## API Endpoints
+- `GET /api/videos/:id`
+- `PUT /api/videos/:id`
+- `POST /api/comments/:videoId`
+- `POST /api/comments/:videoId/reply/:commentId`
+- `DELETE /api/comments/:videoId/:commentId`
+- `POST /api/notes`
+- `GET /api/notes`
+- `GET /api/notes/search?q=`
 
-Upload an unlisted video to YouTube directly (not via API).
+## Database Schema
+### `notes`
+- id (serial PK)
+- content (text)
+- tags (text)
+- created_at (timestamp)
 
-On your app's home page, show details about your uploaded video by fetching via API.
+### `logs`
+- id (serial PK)
+- event (text)
+- created_at (timestamp)
 
-Add an option to comment on the video and reply to any comment.
-
-Add an option to change the title and description of the video.
-
-Allow the user to delete their comment as well.
-
-Add a notes section (stored in your DB) where the user can jot down ideas for improving the video.
-
-Add a basic search or tagging feature to quickly find notes later.
-
-Requirements
-Capture all event logs and store them into a database of your choice.
-
-In your README file, list down your API endpoints as well as your database schema.
-
-Deploy the API + UI online. You can use Vercel, Netlify, Cloudflare, Heroku, Render, etc.
-
-Submit here: https://forms.gle/ER387znmXfN4MvzdA
-
-All the best. You got this!
+## Deployment
+- Backend: Render / Heroku
+- Frontend: Vercel / Netlify
