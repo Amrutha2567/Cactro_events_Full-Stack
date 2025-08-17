@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouTube Companion</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    // minimal mount for the skeleton App
+    import React from "https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js";
+    import ReactDOM from "https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js";
+    // fetch the component script via dynamic import won't be done here -
+    // this is intentionally minimal. Replace with proper bundler setup.
+    const root = document.getElementById('root');
+    root.innerHTML = "<h1>YouTube Companion - Open frontend/src/App.jsx to implement UI</h1><p>This index.html is a placeholder for the frontend skeleton.</p>";
+  </script>
+</body>
+</html>
